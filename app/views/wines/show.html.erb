@@ -3,3 +3,4 @@
 <h3> Rating: <%= @wine.rating %></h3>
 <h3> Personal Opinion: <%= @wine.opinion %></h3>
 <h3> Price: $<%= @wine.price %></h3>
+<%= link_to "Update #{@wine.title}", edit_wine_path(@wine) %>
