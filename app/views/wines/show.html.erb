@@ -4,3 +4,5 @@
 <h3> Personal Opinion: <%= @wine.opinion %></h3>
 <h3> Price: $<%= @wine.price %></h3>
 <%= button_to "Update #{@wine.title}", edit_wine_path(@wine), method: :get %>
+
+<%= button_to "Delete #{@wine.title}", wine_path(@wine), method: :delete %>
