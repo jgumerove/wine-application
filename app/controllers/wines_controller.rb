@@ -1,4 +1,8 @@
 class WinesController < ApplicationController
+
+    before_action :set_wine, only: [:show, :edit]
+
+
     def index
         @wines = Wine.all
     end
@@ -16,7 +20,14 @@ class WinesController < ApplicationController
         redirect_to wine
     end
 
+    def edit
+    end
+
     private
+
+    def set_wine
+        @wine = Wine.find(params[:id])
+    end
     
     def wine_params
         params.require(:wine).permit(:title, :country, :rating, :opinion, :price)
