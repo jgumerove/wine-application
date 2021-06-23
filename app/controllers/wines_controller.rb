@@ -10,4 +10,16 @@ class WinesController < ApplicationController
     def new
         @wine = Wine.new
     end
+
+    def create
+        wine = Wine.create(wine_params)
+        redirect_to wine
+    end
+
+    private
+    
+    def wine_params
+        params.require(:wine).permit(:title, :country, :rating, :opinion, :price)
+    end
+
 end
