@@ -1,0 +1,15 @@
+<h1>Add a wine to your collection</h1>
+
+<%= form_for @wine do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :country %>
+  <%= f.text_field :country %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating,  in: 1...100 %>
+  <%= f.label :opinion %>
+  <%= f.text_field :opinion %>
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <%= f.submit %>
+<% end %>
