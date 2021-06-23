@@ -1,0 +1,7 @@
+<h1>Below are all the wines available in your collection:</h1>
+
+<ul>
+<% @wines.each do |wine|%>
+<li><%= wine.title %></li>
+<% end %>
+</ul>
